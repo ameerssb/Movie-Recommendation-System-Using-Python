@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Movie Recommendation System</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="{% static 'styles/bootstrap.min.css' %}">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'styles/headers.css' %}" rel="stylesheet">
+  <link href="{% static 'styles/dashboard.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'js/cheatsheet.js'%}"></script>
+</body>
+</html>
