@@ -1,0 +1,79 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+<main>
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <h2 class="fs-4">Movie Recommendation System</h2>
+    </a>
+
+    <ul class="nav nav-pills ">
+      <li class="nav-item"><a href="" class="nav-link active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="/moviesList" class="nav-link">Movies List</a></li>
+      <li class="nav-item"><a href="/UserRecommendation?userid=1" class="nav-link">User Recommendation</a></li>
+      <li class="nav-item"><a href="/Genres?genre=Mystery" class="nav-link">By Genres</a></li>
+      <li class="nav-item"><a href="/watchBy?title=Toy%20Story%20(1995)" class="nav-link">Others Watch</a></li>
+      <li class="nav-item"><a href="/similarMovies?title=Toy%20Story%20(1995)" class="nav-link">Similar Movies</a></li>
+      <li class="nav-item"><a href="/similarContent?title=Toy%20Story%20(1995)" class="nav-link">Based on Content</a></li>
+    </ul>
+  </header>
+</div>
+</main>
+<link href="{% static 'styles/features.css' %}" rel="stylesheet">
+<div class="container px-4 py-5" id="hanging-icons">
+    <h2 class="pb-2 border-bottom">Movie Recommendation System Content</h2>
+    <div class="row g-4 py-5 px-4 row-cols-lg-2">
+      <div class="px-1">
+        <h2>Recommendation For a User</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/UserRecommendation?userid=1" class="btn btn-primary">
+          User Recommendation
+        </a>
+      </div>
+      <div>
+        <h2>Recommendation by Genres</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/Genres?genre=Mystery" class="btn btn-primary">
+          Based on Genres
+        </a>
+      </div>
+    </div>
+    <div class="row g-4 py-5 px-4 row-cols-lg-2">
+      <div class="px-1">
+        <h2>Recommendation Watch by Other Viewers</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/watchBy?title=Toy%20Story%20(1995)" class="btn btn-primary">
+          Watch By Other Viewers
+        </a>
+      </div>
+      <div>
+        <h2>Recommendation Based on Similar Movies</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/similarMovies?title=Toy%20Story%20(1995)" class="btn btn-primary">
+          Similar Movies
+        </a>
+      </div>
+    </div>
+    <div class="row g-4 py-5 px-4 row-cols-lg-2">
+      <div class="px-1">
+        <h2>Recommendation Based on Similar Content</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/similarContent?title=Toy%20Story%20(1995)" class="btn btn-primary">
+          Similar Content
+        </a>
+      </div>
+      <div>
+        <h2>List of Movies with Names and Genres Category</h2>
+        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <a href="/moviesList" class="btn btn-primary">
+          Movie List
+        </a>
+      </div>
+    </div>
+</div>
+{% endblock content %}
+

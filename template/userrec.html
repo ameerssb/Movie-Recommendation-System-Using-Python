@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+<main>
+<div class="container">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <h2 class="fs-4">Movie Recommendation System</h2>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="/moviesList" class="nav-link">Movies List</a></li>
+      <li class="nav-item"><a href="/UserRecommendation?userid=1" class="nav-link active">User Recommendation</a></li>
+      <li class="nav-item"><a href="/Genres?genre=Mystery" class="nav-link">By Genres</a></li>
+      <li class="nav-item"><a href="/watchBy?title=Toy%20Story%20(1995)" class="nav-link">Others Watch</a></li>
+      <li class="nav-item"><a href="/similarMovies?title=Toy%20Story%20(1995)" class="nav-link">Similar Movies</a></li>
+      <li class="nav-item"><a href="/similarContent?title=Toy%20Story%20(1995)" class="nav-link">Based on Content</a></li>
+    </ul>
+  </header>
+</div>
+<div class="container">
+  <div class="mb-3 d-flex flex-wrap justify-content-center">
+    <select name="type" onchange="location = this.value;" class="form-select form-select-lg" aria-label=".form-select-lg">
+      {% for ls in List %}
+      <option value="/UserRecommendation?userid={{ls}}">{{ls}}</option>
+      {% endfor %}
+    </select>
+</div>
+  <h2 class="text-center mb-4">USER: {{id}} Top {{NoOf}} Recommendation</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">S/N</th>
+        <th scope="col">Movie Name</th>
+        <th scope="col">Movie Genre's</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for lst in listof %}
+      <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{lst.0}}</td>
+        <td>{{lst.1}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+</main>
+
+{% endblock content %}
+
