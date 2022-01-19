@@ -1,16 +1,7 @@
 # Movie-Recommendation-System-using-python
 
 ## Data Set 
-The data set used for this notebook is the 1M ratings data set from MovieLens. This contains 1M ratings of movies from 7120 movies and 14,025 Users. This data set includes:
-
-* **movieId**
-* **userId**
-* **rating**
-
-In addition a data set of the movies includes the movie name and genres.
-* **movieId**
-* **title**
-* **genres**
+This dataset (ml-latest-small) describes 5-star rating and free-text tagging activity from [MovieLens](http://movielens.org), a movie recommendation service. It contains 100836 ratings and 3683 tag applications across 9742 movies. These data were created by 610 users between March 29, 1996 and September 24, 2018. This dataset was generated on September 26, 2018.
 
 ## Demo:
 ### you can view the demo using python manage.py runserver
@@ -34,9 +25,9 @@ Here we just information about the movies, in this case the information of genre
 
 
 ## Required Tools
+1. python 3
 2. Scipy
 3. Numpy
 4. Pandas
 5. sk-learn
-6. python 3
 
