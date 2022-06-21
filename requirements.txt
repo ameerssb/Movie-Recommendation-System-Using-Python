@@ -1,6 +1,5 @@
 pandas
 numpy
 Django
-pickle
 scipy
 sklearn
